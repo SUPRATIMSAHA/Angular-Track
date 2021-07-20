@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular-Track';
+  title:string = 'Angular-Track';
+  items:Array<string> = ['Apples', 'Bananas', 'Cherries'];
+
+  onItemAdded(newItem:any) {
+    this.items.push(newItem);
+    console.log(this.items)
+  }
 }

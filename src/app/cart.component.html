@@ -1,0 +1,9 @@
+<ul>
+  {{ items}}
+</ul>
+
+<input type="text" [(ngModel)]="newItem">
+<br />
+<p>{{ newItem }}</p>
+<br />
+<button (click)="onButtonClick()" >Add Item</button>
