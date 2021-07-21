@@ -7,7 +7,7 @@ import { Component } from '@angular/core'
     <input type="text" [(ngModel)]="loadState" >
     <br />
     <br />
-    <button (click)="changeLoadingState()">Click to change state</button>
+    <button class="btn btn-success" (click)="changeLoadingState()">Click to change state</button>
   `
 })
 export class DashboardComponent {

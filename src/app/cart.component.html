@@ -1,9 +1,17 @@
-<ul>
-  {{ items}}
-</ul>
-
 <input type="text" [(ngModel)]="newItem">
+<p *ngIf="!newItem">Please enter a new item!</p>
 <br />
 <p>{{ newItem }}</p>
+<button
+  class="btn"
+  [ngClass]="{'btn-success': newItem, 'btn-danger': !newItem}"
+  (click)="newItem ? onButtonClick() : ''" >Add Item</button>
+
 <br />
-<button (click)="onButtonClick()" >Add Item</button>
+<br />
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let item of items; let i = index"
+    [ngStyle]="{backgroundColor: i % 2 ? 'Red' : 'Yellow'}">{{ item }}</li>
+</ul>

@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component';
 import { CartComponent } from './cart.component';
 import { UserComponent } from './user/user.component';
+import { ProjectComponent } from './project/project.component';
+import { TabsComponent } from './project/tabs/tabs.component';
+import { ItemComponent } from './project/item/item.component';
+import { ListComponent } from './project/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CartComponent,
-    UserComponent
+    UserComponent,
+    ProjectComponent,
+    TabsComponent,
+    ItemComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
