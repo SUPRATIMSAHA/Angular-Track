@@ -4,15 +4,30 @@
     <div class="col-xs-12">
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">All</a>
+          <a
+            class="nav-link"
+            [ngClass]="{'active': choosenList === 'all'}"
+            aria-current="page" href="#"
+            (click)="onChoose('all')">All</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Light</a>
+          <a
+            class="nav-link"
+            [ngClass]="{'active': choosenList === 'light'}"
+            href="#"
+            (click)="onChoose('light')">Light</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dark</a>
+          <a
+          class="nav-link"
+          [ngClass]="{'active': choosenList === 'dark'}"
+          href="#"
+          (click)="onChoose('dark')">Dark</a>
         </li>
       </ul>
     </div>
+    <app-list
+      [characters]="getCharacters()"
+      (sideAssigned)="onSideAssigned($event)"></app-list>
   </div>
 </div>
