@@ -9,10 +9,14 @@ import { StarWarsService } from './start-wars.service';
   providers: [StarWarsService, LogService]
 })
 export class ProjectComponent implements OnInit {
+  swService: StarWarsService;
 
-  constructor() { }
+  constructor(swService: StarWarsService) {
+    this.swService = swService;
+   }
 
   ngOnInit(): void {
+    this.swService.fetchCharacters();
   }
 
 }

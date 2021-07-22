@@ -1,8 +1,8 @@
-<a href="#" class="list-group-item list-group-item-action" aria-current="true">
+<a class="list-group-item list-group-item-action" >
   <div class="d-sm-flex w-100 justify-content-between">
     <h5 class="list-group-item-heading">{{ character.name }}</h5>
     <div>
-      <div class="btn btn-primary me-2" (click)="onAssign('light')">Light</div>
+      <div class="btn btn-primary me-2" data-name="light" (click)="onAssign('light')">Light</div>
       <div class="btn btn-danger" (click)="onAssign('dark')">Dark</div>
     </div>
   </div>
